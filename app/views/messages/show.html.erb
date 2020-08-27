@@ -4,4 +4,4 @@
 
 <%= link_to '一覧に戻る', message_path %>
 <%= link_to 'このメッセージを編集する', edit_message_path(@message) %>
-<%= link_to 'このメッセージを抹消する', @message, :delete, data: {confirm:'本当に消してもよろしいのでしょうか？'} %>
+<%= link_to 'このメッセージを抹消する', @message, method: :delete, data: {confirm:'本当に消してもよろしいのでしょうか？'} %>
