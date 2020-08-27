@@ -30,7 +30,7 @@ class MessagesController < ApplicationController
     def update
         @message = Message.find(params[:id])
         
-        if @message.update
+        if @message.update(message_params)
             flash[:success] = 'メッセージが正常に投稿されました！'
             redirect_to @message
         else
