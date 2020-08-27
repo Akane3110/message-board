@@ -28,6 +28,8 @@ class MessagesController < ApplicationController
     end
     
     def update
+        @message = Message.find(params[:id])
+        
         if @message.update
             flash[:success] = 'メッセージが正常に投稿されました！'
             redirect_to @message
